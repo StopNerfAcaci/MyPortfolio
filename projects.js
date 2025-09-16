@@ -2,7 +2,7 @@ const projectsData = [
     {
         title: "Matching Dice",
         description: "A puzzle game where player put dices with number into a grid",
-        image: "/images/dice.png",
+        image: "images/dice.png",
         tag: ["All", "2D"],
         gitUrl: "/",
         previewUrl: "https://cdn.gamebatta.com/dice-puzzle/",
@@ -10,7 +10,7 @@ const projectsData = [
     {
         title: "Celeste Clone",
         description: "An non-profit project use for school exam",
-        image: "/images/celeste.png",
+        image: "images/celeste.png",
         tag: ["All", "2D"],
         gitUrl: "/",
         previewUrl: "https://www.youtube.com/watch?v=c-tBwPkjQvE",
@@ -18,7 +18,7 @@ const projectsData = [
     {
         title: "Weather game",
         description: "A small minigame for english beginner student",
-        image: "/images/weather.png",
+        image: "images/weather.png",
         tag: ["All", "2D"],
         gitUrl: "/",
         previewUrl: "https://cdn.gamebatta.com/batta-weather/",
@@ -26,7 +26,7 @@ const projectsData = [
     {
         title: "Falling Fruit",
         description: "A puzzle game where you drop 2 or more fruits with similar number to get the bigger number",
-        image: "/images/fruit.png",
+        image: "images/fruit.png",
         tag: ["All", "2D"],
         gitUrl: "/",
         previewUrl: "https://cdn.gamebatta.com/batta-faling-fruits/",
@@ -34,7 +34,7 @@ const projectsData = [
     {
         title: "Overcooked Clone",
         description: "An non-profit project use for university graduation's exam",
-        image: "/images/cooking.png",
+        image: "images/cooking.png",
         tag: ["All", "3D"],
         gitUrl: "/",
         previewUrl: "https://www.youtube.com/watch?v=0Op6iBl0tKo",
