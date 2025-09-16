@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+</head>
+
+<body>
+    <main>
+        <nav class="navbar">
+            <div class="navbar_content">
+                <div className="nav_menu">
+                    <ul class="nav_list">
+                        <li><a href="#about" class="nav-link">About<span class="nav-underline"></span></a></li>
+                        <li><a href="#projects" class="nav-link">Projects<span class="nav-underline"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div className="main_content">
+            <section class="hero-section">
+                <div class="hero-grid">
+                    <div class="hero-text fade-in-scale">
+                        <h1 class="hero-title">
+                            <span class="gradient-text">Welcome, I'm </span>
+                            <span class="typing" id="typing"></span>
+                        </h1>
+                        <p class="hero-subtitle">I love to play and create video game</p>
+                    </div>
+                    <!-- Right image -->
+                    <div class="hero-image-wrapper fade-in-scale">
+                        <div class="hero-image-circle">
+                            <img src="images/hero-image.png" alt="hero image" class="hero-image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section style="color: white;" id="about">
+                <div class="about-content">
+                    <Image src="/images/about-image.png" width={500} height={500} alt='about-img' />
+                    <div class="about-container">
+                        <h2>About Me</h2>
+                        <p className="text-base lg:text-lg">
+                            I am a fresher game developer with a passion for making games.
+                            I have experience working with Unity, Cocos, C#, Typescript,
+                            OOP and Git. I am a quick learner and I am always looking to expand my knowledge and skill
+                            set.
+                            I am a team player and I am excited to work with others to create amazing games.
+                        </p>
+                        <div className="technique-content">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="skills">Skills</button>
+                                <button class="tab-btn" data-tab="education">Education</button>
+                            </div>
+                            <div class="tab-content">
+                                <div id="skills" style="padding: 0;" class="tab-panel active">
+                                    <ul>
+                                        <li>Unity Engine</li>
+                                        <li>C#</li>
+                                        <li>2D & 3D</li>
+                                        <li>Cocos creator</li>
+                                        <li>Git</li>
+                                    </ul>
+                                </div>
+                                <div id="education" style="padding: 0;" class="tab-panel">
+                                    <div style="font-weight: bold;padding: 0">Hanoi University of Industry</div>
+                                    <div
+                                        style="padding: 0; font-size: 0.75rem;font-style: italic; margin-top: 0.25rem; margin-left: 0.375rem;">
+                                        2021-2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        <script src="technique.js"></script>
+                    </div>
+                </div>
+            </section>
+            <section class="project-section" id="projects">
+                <h2 class="section-title">My Projects</h2>
+                <div class="tab-buttons">
+                    <button class="tag-btn active" data-tag="All">All</button>
+                    <button class="tag-btn" data-tag="2D">2D</button>
+                    <button class="tag-btn" data-tag="3D">3D</button>
+                </div>
+                <ul id="project-list" class="project-grid">
+                    <!-- Cards will be injected by JS -->
+                </ul>
+            </section>
+            <script src="projects.js"></script>
+            <ProjectsSection />
+        </div>
+        <footer class="page_footer">
+            <div className="container p-6 flex justify-between">
+                <span>HOANG XUAN TRUONG</span>
+            </div>
+        </footer>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
