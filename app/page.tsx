@@ -1,9 +1,9 @@
-import Image from "next/image";
 import AboutSection from "./about/AboutSection";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import HeroSection from "./HeroSection";
 import ProjectsSection from "./projects/ProjectsSection";
+import ResearchSection from "./research/ResearchSection";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
+        <ResearchSection />
       </div>
       <Footer />
     </main>

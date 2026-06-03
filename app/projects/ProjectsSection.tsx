@@ -1,117 +1,105 @@
-"use client"
-import React, { useState, useRef } from "react";
-import ProjectCard from "./ProjectCard";
-import ProjectTag from "./ProjectTag";
-import { motion, useInView } from "framer-motion";
-const projectsData = [
+import React from "react";
+import PortfolioGridSection, { PortfolioItem } from "../portfolio/PortfolioGridSection";
+
+const projectsData: PortfolioItem[] = [
   {
     id: 1,
     title: "Matching Dice",
     description: "A puzzle game where player put dices with number into a grid",
     image: "/img/dice.png",
-    tag: ["All", "2D"],
-    gitUrl: "/",
-    previewUrl: "https://cdn.gamebatta.com/dice-puzzle/",
+    tags: ["All", "2D"],
+    links: [
+      // { href: "/", label: "View source code", type: "code" },
+      {
+        href: "https://cdn.gamebatta.com/dice-puzzle/",
+        label: "Open project preview",
+        type: "preview",
+      },
+    ],
   },
   {
     id: 2,
     title: "Celeste Clone",
     description: "An non-profit project use for school exam",
     image: "/img/celeste.png",
-    tag: ["All", "2D"],
-    gitUrl: "/",
-    previewUrl: "https://www.youtube.com/watch?v=c-tBwPkjQvE",
+    tags: ["All", "2D"],
+    links: [
+      // { href: "/", label: "View source code", type: "code" },
+      {
+        href: "https://www.youtube.com/watch?v=c-tBwPkjQvE",
+        label: "Open project preview",
+        type: "preview",
+      },
+    ],
   },
   {
     id: 3,
     title: "Weather game",
     description: "A small minigame for english beginner student ",
     image: "/img/weather.png",
-    tag: ["All", "2D"],
-    gitUrl: "/",
-    previewUrl: "https://cdn.gamebatta.com/batta-weather/",
+    tags: ["All", "2D"],
+    links: [
+      // { href: "/", label: "View source code", type: "code" },
+      {
+        href: "https://cdn.gamebatta.com/batta-weather/",
+        label: "Open project preview",
+        type: "preview",
+      },
+    ],
   },
   {
     id: 4,
-    title: "Falling Fruit",
-    description: "A puzzle game where you drop 2 or more fruits with similar number to get the bigger number",
-    image: "/img/fruit.png",
-    tag: ["All", "2D"],
-    gitUrl: "/",
-    previewUrl: "https://cdn.gamebatta.com/batta-faling-fruits/",
+    title: "Animal Mask",
+    description: "A puzzle game inspired by Helltaker, participate in Global game jam 2026",
+    image: "/img/anima.png",
+    tags: ["All", "2D"],
+    links: [
+      // { href: "/", label: "View source code", type: "code" },
+      {
+        href: "https://stopnerfacaci.itch.io/animal-instinct",
+        label: "Open project preview",
+        type: "preview",
+      },
+    ],
   },
   {
     id: 5,
     title: "Overcooked clone",
     description: "An non-profit project use for university graduation's exam",
     image: "/img/cooking.png",
-    tag: ["All", "3D"],
-    gitUrl: "/",
-    previewUrl: "https://www.youtube.com/watch?v=0Op6iBl0tKo",
+    tags: ["All", "3D"],
+    links: [
+      {
+        href: "https://www.youtube.com/watch?v=0Op6iBl0tKo",
+        label: "Open project preview",
+        type: "preview",
+      },
+    ],
+  },
+   {
+    id: 6,
+    title: "Clothes dom",
+    description: "An crafting simulation game similar",
+    image: "/img/clothesdom.png",
+    tags: ["All", "2D"],
+    links: [
+      {
+        href: "https://drive.google.com/file/d/1K5uoXuWxJSe3Bfnax2d-nEsTvFwMuX4E/view?usp=drive_link",
+        label: "Open project preview",
+        type: "preview",
+      },
+    ],
   },
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  const handleTagChange = (newTag:string) => {
-    setTag(newTag);
-  };
-
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
-
-  const cardVariants = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-  };
-
   return (
-    <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-3 md:mb-5">
-        My Projects
-      </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-8 py-6">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="2D"
-          isSelected={tag === "2D"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="3D"
-          isSelected={tag === "3D"}
-        />
-      </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
-          <motion.li
-            key={index}
-            variants={cardVariants}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
-          >
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
-          </motion.li>
-        ))}
-      </ul>
-    </section>
+    <PortfolioGridSection
+      id="projects"
+      title="My Projects"
+      items={projectsData}
+      filters={["All", "2D", "3D"]}
+    />
   );
 };
-export default ProjectsSection
+export default ProjectsSection;

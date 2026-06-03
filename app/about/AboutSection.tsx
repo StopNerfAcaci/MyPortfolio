@@ -12,7 +12,8 @@ const TAB_DATA = [
                 <li>• Unity Engine</li>
                 <li>• C#</li>
                 <li>• 2D and 3D Game Development</li>
-                <li>• Cocos creator</li>
+                <li>• Design pattern</li>
+                <li>• Shader</li>
                 <li>• Git</li>
             </ul>
         ),
@@ -30,7 +31,7 @@ const TAB_DATA = [
 ]
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
 
   const handleTabChange = (id:string) => {
     startTransition(() => {
@@ -45,8 +46,7 @@ const AboutSection = () => {
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
             I am a fresher game developer with a passion for making games.
-            I have experience working with Unity, Cocos, Unreal Engine, C#, C++, Typescript,
-            OOP and Git. I am a quick learner and I am always looking to expand my knowledge and skill set.
+            I have experience working with Unity Engine. I am a quick learner and I am always looking to expand my knowledge and skill set.
             I am a team player and I am excited to work with others to create amazing games.
           </p>
           <div className="flex flex-row justify-start mt-8">
