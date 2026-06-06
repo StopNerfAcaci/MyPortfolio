@@ -34,14 +34,14 @@ const projectsData: PortfolioItem[] = [
   },
   {
     id: 3,
-    title: "Weather game",
-    description: "A small minigame for english beginner student ",
-    image: "/img/weather.png",
+    title: "Tricky Hacks",
+    description: "Hypercasual game where make player think outside of the box",
+    image: "/img/tricky.png",
     tags: ["All", "2D"],
     links: [
       // { href: "/", label: "View source code", type: "code" },
       {
-        href: "https://cdn.gamebatta.com/batta-weather/",
+        href: "https://play.google.com/store/apps/details?id=com.u4.tricky.puzzle",
         label: "Open project preview",
         type: "preview",
       },
