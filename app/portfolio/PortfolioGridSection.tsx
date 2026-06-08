@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import React, { useRef, useState } from "react";
 import FilterTag from "./FilterTag";
 import PortfolioCard, { PortfolioLink } from "./PortfolioCard";
 
@@ -23,7 +23,7 @@ type PortfolioGridSectionProps = {
 };
 
 const cardVariants = {
-  initial: { y: 50, opacity: 0 },
+  initial: { y: 42, opacity: 0 },
   animate: { y: 0, opacity: 1 },
 };
 
@@ -41,38 +41,47 @@ const PortfolioGridSection = ({
   const filteredItems = items.filter((item) => item.tags.includes(tag));
 
   return (
-    <section id={id} className={className}>
-      <h2 className="mt-4 mb-3 text-center text-4xl font-bold text-white md:mb-5">
-        {title}
-      </h2>
-      <div className="flex flex-row items-center justify-center gap-8 py-6 text-white">
-        {filters.map((filter) => (
-          <FilterTag
-            key={filter}
-            onClick={setTag}
-            name={filter}
-            isSelected={tag === filter}
-          />
-        ))}
+    <section id={id} className={`px-5 py-20 md:px-10 ${className}`}>
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-9 flex flex-col gap-5 border-b-4 border-[#07152f] pb-5 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.35em] text-[#1fb7ff]">
+              {id === "projects" ? "Titles" : "Pick Up"}
+            </p>
+            <h2 className="mt-2 text-5xl font-black uppercase leading-none text-[#07152f] md:text-7xl">
+              {title}
+            </h2>
+          </div>
+          <div className="flex flex-row flex-wrap items-center gap-3">
+            {filters.map((filter) => (
+              <FilterTag
+                key={filter}
+                onClick={setTag}
+                name={filter}
+                isSelected={tag === filter}
+              />
+            ))}
+          </div>
+        </div>
+        <ul ref={ref} className="grid gap-5 md:grid-cols-3">
+          {filteredItems.map((item, index) => (
+            <motion.li
+              key={item.id}
+              variants={cardVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+            >
+              <PortfolioCard
+                title={item.title}
+                description={item.description}
+                imgUrl={item.image}
+                links={item.links}
+              />
+            </motion.li>
+          ))}
+        </ul>
       </div>
-      <ul ref={ref} className="grid gap-8 md:grid-cols-3 md:gap-12">
-        {filteredItems.map((item, index) => (
-          <motion.li
-            key={item.id}
-            variants={cardVariants}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.2 }}
-          >
-            <PortfolioCard
-              title={item.title}
-              description={item.description}
-              imgUrl={item.image}
-              links={item.links}
-            />
-          </motion.li>
-        ))}
-      </ul>
     </section>
   );
 };

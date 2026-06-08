@@ -1,20 +1,20 @@
 import AboutSection from "./about/AboutSection";
-import Navbar from "./Navbar";
+import ContactSection from "./contact/ContactSection";
 import Footer from "./Footer";
 import HeroSection from "./HeroSection";
+import Navbar from "./Navbar";
 import ProjectsSection from "./projects/ProjectsSection";
 import ResearchSection from "./research/ResearchSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
+    <main className="min-h-screen overflow-hidden bg-[#eaf6ff] text-[#07152f]">
       <Navbar />
-      <div className="container mt-24 mx-auto px-12 py-4">
-        <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
-        <ResearchSection />
-      </div>
+      <HeroSection />
+      <AboutSection />
+      <ProjectsSection />
+      <ResearchSection />
+      <ContactSection />
       <Footer />
     </main>
   );

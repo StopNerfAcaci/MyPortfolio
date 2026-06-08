@@ -1,24 +1,36 @@
-import React from "react";
 import PortfolioGridSection, { PortfolioItem } from "../portfolio/PortfolioGridSection";
+import React from "react";
 
 const researchData: PortfolioItem[] = [
   {
     id: 1,
     title: "AI Pathfinding",
     description:
-      "Research notes on grid movement, player guidance, and route evaluation for puzzle level design.",
+      "A focused study of grid movement, player guidance, route evaluation, and navigation behavior.",
     image: "/img/pathfinding.png",
     tags: ["All", "AI"],
-    links: [{ href: "https://www.youtube.com/watch?v=vHxv1FsLhfA", label: "Open research details", type: "paper" }],
+    links: [
+      {
+        href: "https://www.youtube.com/watch?v=vHxv1FsLhfA",
+        label: "Open research details",
+        type: "paper",
+      },
+    ],
   },
   {
     id: 2,
-    title: "Basic graphic buffer rotation",
+    title: "Graphic Buffer Rotation",
     description:
-      "A study of draw graphic direct to gpu",
+      "A rendering experiment for direct graphic buffer drawing and rotation behavior.",
     image: "/img/graphic-buffer.png",
     tags: ["All", "Shader"],
-    links: [{ href: "https://youtu.be/Hahy22HL0Gc", label: "Open research details", type: "paper" }],
+    links: [
+      {
+        href: "https://youtu.be/Hahy22HL0Gc",
+        label: "Open research details",
+        type: "paper",
+      },
+    ],
   },
 ];
 
@@ -26,10 +38,10 @@ const ResearchSection = () => {
   return (
     <PortfolioGridSection
       id="research"
-      title="My Research"
+      title="Research"
       items={researchData}
       filters={["All", "AI", "Shader"]}
-      className="pt-16"
+      className="bg-[#eaf6ff]"
     />
   );
 };

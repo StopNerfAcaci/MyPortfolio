@@ -1,59 +1,41 @@
-"use client"
-import React from 'react';
-import Image from 'next/image';
-import {motion} from "framer-motion";
-import {TypeAnimation} from "react-type-animation";
+"use client";
+
+import { motion } from "framer-motion";
+import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+    <section id="top" className="relative min-h-[88vh] overflow-hidden bg-[#005bd8] px-5 pt-28 text-white md:px-10">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.16)_0_12%,transparent_12%_100%),linear-gradient(90deg,rgba(0,0,0,0.2)_0_1px,transparent_1px_100%)] bg-[length:100%_100%,52px_52px]" />
+      <div className="absolute bottom-0 left-0 h-[24vh] w-full origin-bottom-left skew-y-[-5deg] bg-[#07152f]" />
+      <div className="relative mx-auto grid min-h-[72vh] max-w-7xl content-center gap-10">
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45 }}
+          className="max-w-6xl"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-              Hello, I&apos;m{" "}
+          <p className="mb-5 inline-block border-2 border-white px-4 py-2 text-sm font-black uppercase tracking-[0.3em]">
+            Game Developer Portfolio
+          </p>
+          <h1 className="text-[clamp(4rem,16vw,13rem)] font-black uppercase leading-[0.78] text-white">
+            Hoang Xuan
+            <span className="block text-[#07152f] drop-shadow-[5px_5px_0_#8edcff]">
+              Truong
             </span>
-            <br></br>
-            <TypeAnimation
-              sequence={[
-                "Truong",
-                1000,
-                "Game Developer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            I love to play and create video games.
+          <p className="mt-8 max-w-3xl border-l-8 border-white pl-5 text-2xl font-black uppercase leading-tight md:text-4xl">
+            Unity Game Developer
           </p>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
-        >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-            <Image
-              src="/images/hero-image.png"
-              alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
-            />
-          </div>
-        </motion.div>
+        <div className="relative z-10 flex flex-wrap gap-3 text-sm font-black uppercase tracking-[0.16em]">
+          <span className="bg-white px-4 py-3 text-[#07152f]">Gameplay</span>
+          <span className="bg-[#07152f] px-4 py-3 text-white">Prototype</span>
+          <span className="bg-[#8edcff] px-4 py-3 text-[#07152f]">Unity</span>
+        </div>
       </div>
     </section>
   );
 };
 
-export default HeroSection
+export default HeroSection;

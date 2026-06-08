@@ -1,15 +1,14 @@
-import React from "react";
 import PortfolioGridSection, { PortfolioItem } from "../portfolio/PortfolioGridSection";
+import React from "react";
 
 const projectsData: PortfolioItem[] = [
   {
     id: 1,
     title: "Matching Dice",
-    description: "A puzzle game where player put dices with number into a grid",
+    description: "A score-focused dice puzzle about merging matching values into stronger plays.",
     image: "/img/dice.png",
     tags: ["All", "2D"],
     links: [
-      // { href: "/", label: "View source code", type: "code" },
       {
         href: "https://cdn.gamebatta.com/dice-puzzle/",
         label: "Open project preview",
@@ -20,11 +19,10 @@ const projectsData: PortfolioItem[] = [
   {
     id: 2,
     title: "Celeste Clone",
-    description: "An non-profit project use for school exam",
+    description: "A non-profit platformer study focused on movement timing, jumps, and level feel.",
     image: "/img/celeste.png",
     tags: ["All", "2D"],
     links: [
-      // { href: "/", label: "View source code", type: "code" },
       {
         href: "https://www.youtube.com/watch?v=c-tBwPkjQvE",
         label: "Open project preview",
@@ -35,11 +33,10 @@ const projectsData: PortfolioItem[] = [
   {
     id: 3,
     title: "Tricky Hacks",
-    description: "Hypercasual game where make player think outside of the box",
+    description: "A hypercasual puzzle release built around surprising solutions and quick interaction.",
     image: "/img/tricky.png",
     tags: ["All", "2D"],
     links: [
-      // { href: "/", label: "View source code", type: "code" },
       {
         href: "https://play.google.com/store/apps/details?id=com.u4.tricky.puzzle",
         label: "Open project preview",
@@ -50,11 +47,10 @@ const projectsData: PortfolioItem[] = [
   {
     id: 4,
     title: "Animal Mask",
-    description: "A puzzle game inspired by Helltaker, participate in Global game jam 2026",
+    description: "A jam prototype inspired by grid puzzles, readable turns, and compact encounter design.",
     image: "/img/anima.png",
     tags: ["All", "2D"],
     links: [
-      // { href: "/", label: "View source code", type: "code" },
       {
         href: "https://stopnerfacaci.itch.io/animal-instinct",
         label: "Open project preview",
@@ -64,8 +60,8 @@ const projectsData: PortfolioItem[] = [
   },
   {
     id: 5,
-    title: "Overcooked clone",
-    description: "An non-profit project use for university graduation's exam",
+    title: "Overcooked Clone",
+    description: "A 3D cooperative cooking systems study with orders, stations, and interaction flow.",
     image: "/img/cooking.png",
     tags: ["All", "3D"],
     links: [
@@ -76,10 +72,10 @@ const projectsData: PortfolioItem[] = [
       },
     ],
   },
-   {
+  {
     id: 6,
-    title: "Clothes dom",
-    description: "An crafting simulation game similar",
+    title: "Clothes Dom",
+    description: "A crafting simulation prototype about production steps, upgrades, and item flow.",
     image: "/img/clothesdom.png",
     tags: ["All", "2D"],
     links: [
@@ -96,10 +92,11 @@ const ProjectsSection = () => {
   return (
     <PortfolioGridSection
       id="projects"
-      title="My Projects"
+      title="Projects"
       items={projectsData}
       filters={["All", "2D", "3D"]}
     />
   );
 };
+
 export default ProjectsSection;

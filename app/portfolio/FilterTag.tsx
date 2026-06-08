@@ -8,17 +8,16 @@ type FilterTagProps = {
 
 const FilterTag = ({ name, onClick, isSelected }: FilterTagProps) => {
   const buttonStyles = isSelected
-    ? "text-white border-primary-500"
-    : "text-[#ADB7BE] border-slate-600 hover:border-white";
+    ? "border-[#005bd8] bg-[#005bd8] text-white"
+    : "border-[#07152f] bg-white text-[#07152f] hover:bg-[#07152f] hover:text-white";
 
   return (
     <button
       type="button"
-      className={`${buttonStyles} relative inline-block cursor-pointer text-xl group`}
+      className={`${buttonStyles} cursor-pointer border-2 px-4 py-2 text-sm font-black uppercase tracking-[0.18em] transition`}
       onClick={() => onClick(name)}
     >
       {name}
-      <span className="absolute left-1/2 bottom-1 h-[2px] w-0 -translate-x-1/2 transform bg-white transition-all duration-200 group-hover:w-full" />
     </button>
   );
 };
