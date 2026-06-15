@@ -86,6 +86,20 @@ const projectsData: PortfolioItem[] = [
       },
     ],
   },
+    {
+    id: 7,
+    title: "Pixel flow clone",
+    description: "A no aoa puzzle game where player using the tank to clean the map.",
+    image: "/img/pixel.png",
+    tags: ["All", "3D"],
+    links: [
+      {
+        href: "https://drive.google.com/file/d/19416tIJcczN3eHaV-wQm3Tj675wWtHYl/view?usp=drive_open",
+        label: "Open project preview",
+        type: "preview",
+      },
+    ],
+  },
 ];
 
 const ProjectsSection = () => {
