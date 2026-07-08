@@ -100,6 +100,20 @@ const projectsData: PortfolioItem[] = [
       },
     ],
   },
+      {
+    id: 8,
+    title: "Jam Soccer",
+    description: "A basic prototype of soccer gameplay to join sport jam.",
+    image: "/img/soccer.png",
+    tags: ["All", "3D"],
+    links: [
+      {
+        href: "https://stopnerfacaci.itch.io/soccer-jam",
+        label: "Open project preview",
+        type: "preview",
+      },
+    ],
+  },
 ];
 
 const ProjectsSection = () => {
