@@ -17,6 +17,7 @@ type PortfolioCardProps = {
   title: string;
   description: string;
   links: PortfolioLink[];
+  eyebrow?: string;
 };
 
 const getIcon = (type: PortfolioLink["type"]) => {
@@ -30,6 +31,7 @@ const PortfolioCard = ({
   title,
   description,
   links,
+  eyebrow = "Game Title",
 }: PortfolioCardProps) => {
   return (
     <article className="group h-full border-4 border-[#07152f] bg-white shadow-[8px_8px_0_#07152f] transition hover:-translate-y-1 hover:shadow-[12px_12px_0_#1fb7ff]">
@@ -61,9 +63,11 @@ const PortfolioCard = ({
         </div>
       </div>
       <div className="px-5 py-6">
-        <p className="mb-3 text-xs font-black uppercase tracking-[0.25em] text-[#005bd8]">
-          Game Title
-        </p>
+        {eyebrow && (
+          <p className="mb-3 text-xs font-black uppercase tracking-[0.25em] text-[#005bd8]">
+            {eyebrow}
+          </p>
+        )}
         <h5 className="text-2xl font-black uppercase leading-none text-[#07152f]">
           {title}
         </h5>

@@ -20,6 +20,7 @@ type PortfolioGridSectionProps = {
   items: PortfolioItem[];
   filters: string[];
   className?: string;
+  cardEyebrow?: string;
 };
 
 const cardVariants = {
@@ -33,6 +34,7 @@ const PortfolioGridSection = ({
   items,
   filters,
   className = "",
+  cardEyebrow,
 }: PortfolioGridSectionProps) => {
   const [tag, setTag] = useState(filters[0] ?? "All");
   const ref = useRef(null);
@@ -77,6 +79,7 @@ const PortfolioGridSection = ({
                 description={item.description}
                 imgUrl={item.image}
                 links={item.links}
+                eyebrow={cardEyebrow}
               />
             </motion.li>
           ))}

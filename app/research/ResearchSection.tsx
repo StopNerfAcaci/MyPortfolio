@@ -32,6 +32,21 @@ const researchData: PortfolioItem[] = [
       },
     ],
   },
+    {
+    id: 3,
+    title: "Slave system - In progress",
+    description:
+      "Recreate the logic behind the pal behavior system in the game palworld.",
+    image: "/img/none",
+    tags: ["All", "AI"],
+    links: [
+      {
+        href: "https://github.com/StopNerfAcaci/ChoreSystem",
+        label: "Open research details",
+        type: "paper",
+      },
+    ],
+  },
 ];
 
 const ResearchSection = () => {
@@ -42,6 +57,7 @@ const ResearchSection = () => {
       items={researchData}
       filters={["All", "AI", "Shader"]}
       className="bg-[#eaf6ff]"
+      cardEyebrow=""
     />
   );
 };
