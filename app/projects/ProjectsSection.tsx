@@ -88,7 +88,7 @@ const projectsData: PortfolioItem[] = [
   },
     {
     id: 7,
-    title: "Pixel flow clone",
+    title: "Tank flow",
     description: "A no aoa puzzle game where player using the tank to clean the map.",
     image: "/img/pixel.png",
     tags: ["All", "3D"],
@@ -103,12 +103,26 @@ const projectsData: PortfolioItem[] = [
       {
     id: 8,
     title: "Jam Soccer",
-    description: "A basic prototype of soccer gameplay to join sport jam.",
+    description: "A basic prototype made in 2 days.",
     image: "/img/soccer.png",
     tags: ["All", "3D"],
     links: [
       {
         href: "https://stopnerfacaci.itch.io/soccer-jam",
+        label: "Open project preview",
+        type: "preview",
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: "Zodiac game",
+    description: "2D RPG Metroidvania",
+    image: "/img/zodiac.png",
+    tags: ["All", "2D"],
+    links: [
+      {
+        href: "https://drive.google.com/drive/folders/1iql8O7IoaUm0O4B9Ir7iBTBNlcVuJmih",
         label: "Open project preview",
         type: "preview",
       },
