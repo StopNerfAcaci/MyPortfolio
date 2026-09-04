@@ -100,22 +100,8 @@ const projectsData: PortfolioItem[] = [
       },
     ],
   },
-      {
-    id: 8,
-    title: "Jam Soccer",
-    description: "A basic prototype made in 2 days.",
-    image: "/img/soccer.png",
-    tags: ["All", "3D"],
-    links: [
-      {
-        href: "https://stopnerfacaci.itch.io/soccer-jam",
-        label: "Open project preview",
-        type: "preview",
-      },
-    ],
-  },
   {
-    id: 9,
+    id: 8,
     title: "Zodiac game",
     description: "2D RPG Metroidvania",
     image: "/img/zodiac.png",
