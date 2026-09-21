@@ -114,6 +114,20 @@ const projectsData: PortfolioItem[] = [
       },
     ],
   },
+    {
+    id: 9,
+    title: "Beating Rhythm",
+    description: "2D Rhythm game participate in Gem nhem jam for 2 weeks",
+    image: "/img/rhythm.png",
+    tags: ["All", "2D"],
+    links: [
+      {
+        href: "https://aicachi.itch.io/beatingrhyme",
+        label: "Open project preview",
+        type: "preview",
+      },
+    ],
+  },
 ];
 
 const ProjectsSection = () => {
