@@ -4,13 +4,13 @@ import React from "react";
 const projectsData: PortfolioItem[] = [
   {
     id: 1,
-    title: "Matching Dice",
-    description: "A score-focused dice puzzle about merging matching values into stronger plays.",
-    image: "/img/dice.png",
-    tags: ["All", "2D"],
+    title: "Tank flow",
+    description: "A puzzle game where player using the tank to clean the map.",
+    image: "/img/pixel.png",
+    tags: ["All", "3D"],
     links: [
       {
-        href: "https://cdn.gamebatta.com/dice-puzzle/",
+        href: "https://drive.google.com/file/d/19416tIJcczN3eHaV-wQm3Tj675wWtHYl/view?usp=drive_open",
         label: "Open project preview",
         type: "preview",
       },
@@ -18,18 +18,19 @@ const projectsData: PortfolioItem[] = [
   },
   {
     id: 2,
-    title: "Celeste Clone",
-    description: "A non-profit platformer study focused on movement timing, jumps, and level feel.",
-    image: "/img/celeste.png",
+    title: "Zodiac game",
+    description: "2D RPG Metroidvania",
+    image: "/img/zodiac.png",
     tags: ["All", "2D"],
     links: [
       {
-        href: "https://www.youtube.com/watch?v=c-tBwPkjQvE",
+        href: "https://drive.google.com/drive/folders/1iql8O7IoaUm0O4B9Ir7iBTBNlcVuJmih",
         label: "Open project preview",
         type: "preview",
       },
     ],
   },
+
   {
     id: 3,
     title: "Tricky Hacks",
@@ -46,6 +47,20 @@ const projectsData: PortfolioItem[] = [
   },
   {
     id: 4,
+    title: "Trapline",
+    description: "A simple board filling game with board",
+    image : "/img/trapline.png",
+    tags: ["All", "2D"],
+    links: [
+      {
+        href: "https://play.google.com/store/apps/details?id=com.nstage.trapline&hl=en",
+        label: "Open project preview",
+        type: "preview",
+      },
+    ],
+  },
+  {
+    id: 5,
     title: "Animal Mask",
     description: "A jam prototype inspired by grid puzzles, readable turns, and compact encounter design.",
     image: "/img/anima.png",
@@ -59,7 +74,7 @@ const projectsData: PortfolioItem[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Overcooked Clone",
     description: "A 3D cooperative cooking systems study with orders, stations, and interaction flow.",
     image: "/img/cooking.png",
@@ -73,7 +88,7 @@ const projectsData: PortfolioItem[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Clothes Dom",
     description: "A crafting simulation prototype about production steps, upgrades, and item flow.",
     image: "/img/clothesdom.png",
@@ -86,36 +101,8 @@ const projectsData: PortfolioItem[] = [
       },
     ],
   },
-    {
-    id: 7,
-    title: "Tank flow",
-    description: "A no aoa puzzle game where player using the tank to clean the map.",
-    image: "/img/pixel.png",
-    tags: ["All", "3D"],
-    links: [
-      {
-        href: "https://drive.google.com/file/d/19416tIJcczN3eHaV-wQm3Tj675wWtHYl/view?usp=drive_open",
-        label: "Open project preview",
-        type: "preview",
-      },
-    ],
-  },
   {
     id: 8,
-    title: "Zodiac game",
-    description: "2D RPG Metroidvania",
-    image: "/img/zodiac.png",
-    tags: ["All", "2D"],
-    links: [
-      {
-        href: "https://drive.google.com/drive/folders/1iql8O7IoaUm0O4B9Ir7iBTBNlcVuJmih",
-        label: "Open project preview",
-        type: "preview",
-      },
-    ],
-  },
-    {
-    id: 9,
     title: "Beating Rhythm",
     description: "2D Rhythm game participate in Gem nhem jam for 2 weeks",
     image: "/img/rhythm.png",
@@ -123,6 +110,20 @@ const projectsData: PortfolioItem[] = [
     links: [
       {
         href: "https://aicachi.itch.io/beatingrhyme",
+        label: "Open project preview",
+        type: "preview",
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: "Celeste Clone",
+    description: "A non-profit platformer study focused on movement timing, jumps, and level feel.",
+    image: "/img/celeste.png",
+    tags: ["All", "2D"],
+    links: [
+      {
+        href: "https://www.youtube.com/watch?v=c-tBwPkjQvE",
         label: "Open project preview",
         type: "preview",
       },
